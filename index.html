@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego Militar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <!-- Pantalla de inicio -->
+    <div id="pantalla-inicio">
+      <h1>🔥 MISIÓN COMANDO 🔥</h1>
+      <p>Soldado, tu misión es eliminar <strong>5 enemigos</strong> ocultos entre los escombros.</p>
+      <p> La mision adicional es que nuestro amor dure mucho</p>
+      <p>Usa las flechas para moverte y la barra espaciadora para disparar.</p>
+      <button onclick="iniciarJuego()">Iniciar Misión</button>
+    </div>
+
+    <!-- Título dentro del juego -->
+    <div id="titulo-juego" class="oculto">🔥 MISIÓN COMANDO 🔥</div>
+
+    <!-- Jugador con nombre -->
+    <div id="player-wrapper" class="oculto">
+      <div class="player-name">Maro Ramirez</div>
+      <img id="player" src="militar.png" alt="Militar">
+    </div>
+
+    <!-- Obstáculos -->
+    <div class="obstaculo" style="left: 30vw; top: 20vh;"></div>
+    <div class="obstaculo" style="left: 50vw; top: 40vh;"></div>
+    <div class="obstaculo" style="left: 70vw; top: 30vh;"></div>
+
+    <!-- Pantalla de victoria -->
+    <div id="fin-juego" class="oculto">
+      <h1>¡Misión Cumplida!</h1>
+      <p>Has derrotado a todos los enemigos.</p>
+      <p>te amo gordito con todo mi corazoncito</p>
+    </div>
+  </div>
+  <!-- Controles móviles -->
+  <div id="controles-moviles">
+    <div class="fila">
+      <button onclick="mover('up')">🔼</button>
+    </div>
+    <div class="fila">
+      <button onclick="mover('left')">◀️</button>
+      <button onclick="disparar()">🚀</button>
+      <button onclick="mover('right')">▶️</button>
+    </div>
+    <div class="fila">
+      <button onclick="mover('down')">🔽</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
